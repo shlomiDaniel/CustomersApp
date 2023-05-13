@@ -18,34 +18,19 @@ customer !:Customer;
     @Inject(MAT_DIALOG_DATA) public data: any
   ) { }
 
-  // Add any necessary methods or logic for the dialog component
-
   closeDialog(): void {
     this.dialogRef.close();
   }
 
   ngOnInit(): void {
-debugger;
+
     this.customer = this.data.customomer;
     console.log(this.data);
   }
 
   saveDetails(customer:Customer){
-    debugger;
-  /* /!* readonly baseCustomersUrl = 'https://localhost:7244/api';*!/
-    const url = `${'https://localhost:7244/api'}/customers/PutCustomerByCustomerOBj/${customer.identityNumber}`; // Replace with your API endpoint URL
-    this.http.put(url, customer)
-      .subscribe(
-        () => {
-          console.log('Customer updated successfully');
-          // Handle success or perform any additional operations
-        },
-        (error) => {
-          console.error('Error updating customer', error);
-          // Handle error
-        }
-      );*/
-     this.serviceCustomers.updateCustomer2("301037065",customer);
+
+     this.serviceCustomers.updateCustomer2(this.customer.identityNumber,customer);
 
   }
 

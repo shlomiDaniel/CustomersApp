@@ -63,7 +63,7 @@ export class AuthenticationPageComponent implements OnInit {
   }
 
   showCustomerDetails(identity: string): void {
-    debugger;
+
     if (this.identity != null) {
       if (this.validateIsraeliID()) {
         this.identity = identity;
@@ -79,7 +79,7 @@ export class AuthenticationPageComponent implements OnInit {
             })
           )
           .subscribe((data: Customer) => {
-            debugger;
+
             if (data) {
               this.customer = data;
               console.log(data);

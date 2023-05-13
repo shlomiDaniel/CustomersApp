@@ -28,26 +28,23 @@ export class CustomerDetailsComponent implements OnInit {
   customer!: Customer;
 
   ngOnInit(): void {
-    debugger;
+
     this.route.paramMap.subscribe((res:any) => {
-      debugger;
+
       this.identityParam = res.params.id;
       console.log(this.identity); // Use the parameter value as required
     });
 
-
-    debugger;
     this.customer1 = {} as Customer;
     this.customer = {} as Customer;
     if( this.identityParam != null){
       this.identity = this.identityParam;
     }
-    debugger;
+
     if (this.identity != null) {
       this.customers$ = this.service.getCustomerByIdentityNumber(this.identity);
       this.customers$.subscribe((customer: Customer) => {
         if (customer) {
-          debugger;
           this.customer.firstName = customer.firstName;
           this.customer.lastName = customer.lastName;
           this.customer.city = customer.city;
@@ -62,8 +59,7 @@ export class CustomerDetailsComponent implements OnInit {
   }
 
   openDialog(){
-    debugger;
-    debugger;
+
     const dialogRef = this.dialog.open(DialogComponent, {
       width: '400px',
       data: { customomer:this.customer }

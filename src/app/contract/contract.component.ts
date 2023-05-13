@@ -25,7 +25,7 @@ export class ContractComponent implements OnInit{
 
 
   ngOnInit(): void {
-    debugger;
+
 
   }
 }

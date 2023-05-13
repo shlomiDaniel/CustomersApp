@@ -17,7 +17,7 @@ export class CustomerService {
     return this.http.get(this.baseCustomersUrl + '/customers/' + id);
   }
   getCustomerByIdentityNumber(identityNumber: string): Observable<any> {
-    debugger;
+
     return this.http.get(
       this.baseCustomersUrl +
         '/customers/GetCustomerByIdentityNumber/' +
@@ -31,7 +31,7 @@ export class CustomerService {
     return this.http.put(this.baseCustomersUrl + '/customers', customer);
   }
   updateCustomer2(identity: string, customer: any): void {
-    debugger;
+
     const url = `${this.baseCustomersUrl}/Customers/PutCustomerByCustomerOBj/${identity}`; // Replace with your API endpoint URL
     this.http.put(url, customer)
       .subscribe(

@@ -8,7 +8,6 @@
         <a  (click)="openDialog()">Edit</a>
       </div>
     </div>
-
     <div  class="detail-row" *ngIf="customer.lastName">
       <label>Last Name:</label>
       <span>{{ customer.lastName }}</span>
@@ -16,17 +15,13 @@
         <a href="#" (click)="openDialog()">Edit</a>
       </div>
     </div>
-
     <div class="detail-row" *ngIf="customer.city">
-
       <label>City:</label>
       <span>{{ customer.city }}</span>
       <div class="edit-delete-links">
         <a href="#" (click)="openDialog()">Edit</a>
-
       </div>
     </div>
-
     <div class="detail-row" *ngIf="customer.houseNumber">
       <label>House Number:</label>
       <span>{{ customer.houseNumber }}</span>
@@ -34,7 +29,6 @@
         <a href="#" (click)="openDialog()">Edit</a>
       </div>
     </div>
-
     <div class="detail-row" *ngIf="customer.zipCode">
       <label>Zip Code:</label>
       <span>{{ customer.zipCode }}</span>
@@ -42,7 +36,6 @@
         <a href="#" (click)="openDialog()">Edit</a>
       </div>
     </div>
-
     <div class="detail-row" *ngIf="customer.street">
       <label>Street:</label>
       <span>{{ customer.street }}</span>
@@ -50,9 +43,6 @@
         <a href="#" (click)="openDialog()" >Edit</a>
       </div>
     </div>
-
-
-
     <div class="contacts mt-2" *ngIf="customer.contracts != null && customer.contracts.length > 0">
       <h3 class="contracts-title">Contracts:</h3>
       <div class="contract-items">
@@ -62,6 +52,5 @@
         </div>
       </div>
     </div>
-
   </mat-card-content>
 </mat-card>
